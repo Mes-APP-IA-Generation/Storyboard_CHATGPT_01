@@ -1,0 +1,161 @@
+/* Variables de couleur */
+:root {
+    --background-color: #000000;
+    --case-background: #000000;
+    --button-add: #8538CB;
+    --button-download: #38CB81;
+    --button-save: #2E7992;
+    --text-color: #FFFFFF;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header input[type="text"] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-align: center;
+    width: auto;
+    max-width: 300px;
+    padding: 5px;
+    margin: 0;
+  }
+  
+  header input[type="text"]:focus {
+    outline: none;
+    border-bottom: 1px solid var(--button-add); /* Accentue lors de l'édition */
+  }
+  
+  h2 input {
+    font-size: 1.2rem;
+  }
+  
+  
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #galleryBtn {
+    background-color: var(--button-save);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #addCaseBtn {
+    background-color: var(--button-add);
+    color: var(--text-color);
+  }
+  
+  #downloadBtn {
+    background-color: var(--button-download);
+    color: var(--text-color);
+  }
+  
+  #saveBtn {
+    background-color: var(--button-save);
+    color: var(--text-color);
+  }
+  
+  #storyboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .storyboard-case {
+    background-color: var(--case-background);
+    width: 300px;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--text-color);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+  
+  .storyboard-case input,
+  .storyboard-case select,
+  .storyboard-case textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .storyboard-case input::placeholder,
+  .storyboard-case textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .storyboard-case textarea {
+    resize: none;
+    height: 60px;
+  }
+  
+  .storyboard-case img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Bouton de suppression : icône corbeille */
+  .delete-case-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none; /* Supprime le fond */
+    border: none;     /* Supprime la bordure */
+    cursor: pointer;
+    padding: 0;       /* Supprime le padding */
+  }
+  
+  .delete-case-btn svg {
+    fill: var(--text-color);
+    width: 20px;
+    height: 20px;
+    transition: fill 0.2s;
+  }
+  
+  .delete-case-btn:hover svg {
+    fill: #ff4d4d; /* Couleur rouge pour indiquer une action de suppression */
+  }
+  
+  /* Boutons dans la galerie */
+  #galleryBtn {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  #galleryBtn:hover {
+    background-color: #1f5967; /* Couleur légèrement plus foncée pour l'effet de survol */
+  }
+  
